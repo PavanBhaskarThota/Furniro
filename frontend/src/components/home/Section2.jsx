@@ -4,6 +4,9 @@ import img2 from "./homepage/section2_2.png";
 import img3 from "./homepage/section2_3.png";
 
 export const Section2 = () => {
+
+  
+
   return (
     <div style={{ marginTop: "60px" }}>
       <h1
