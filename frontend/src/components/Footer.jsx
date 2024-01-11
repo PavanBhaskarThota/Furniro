@@ -46,7 +46,7 @@ export const Footer = () => {
 
 const DIV = styled.div`
   border-top: 0.5px solid lightgray;
-  margin-top: 100px;
+  
   padding-top: 50px;
   /* padding-bottom: 50px; */
 

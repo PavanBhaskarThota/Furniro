@@ -5,6 +5,11 @@ import filters from "../Assets/shop/system-uicons_filtering.svg";
 import lists from "../Assets/shop/bi_view-list.svg";
 import round from "../Assets/shop/ci_grid-big-round.svg";
 import { Section3 } from "../components/home/Section3";
+import { Footer } from "../components/Footer";
+import trophy from "../Assets/shop/trophy 1.svg";
+import guarantee from "../Assets/shop/guarantee.svg";
+import shipping from "../Assets/shop/shipping.svg";
+import support from "../Assets/shop/customer-support.svg";
 
 export const Shop = () => {
   return (
@@ -66,10 +71,115 @@ export const Shop = () => {
           </p>
         </div>
       </div>
-      <div style={{marginTop:'80px', marginBottom:'80px'}}>
-
-      <Section3 shop="shop" />
+      <div style={{ marginTop: "80px", marginBottom: "80px" }}>
+        <Section3 shop="shop" />
       </div>
+
+      <div
+        style={{
+          width: "40%",
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: "50px",
+          gap: "20px",
+        }}
+      >
+        <button
+          style={{
+            width: "60px",
+            height: "60px",
+            borderRadius: "10px",
+            background: "var(--Primary, #B88E2F)",
+            border: "none",
+            color: "white",
+            fontSize: "20px",
+            fontFamily: "400",
+            cursor: "pointer",
+          }}
+        >
+          1
+        </button>
+        <button
+          style={{
+            width: "60px",
+            height: "60px",
+            borderRadius: "10px",
+            background: "var(--Primary, #F9F1E7)",
+            border: "none",
+            // color:'white',
+            fontSize: "20px",
+            fontFamily: "400",
+            cursor: "pointer",
+          }}
+        >
+          2
+        </button>
+        <button
+          style={{
+            width: "60px",
+            height: "60px",
+            borderRadius: "10px",
+            background: "var(--Primary, #F9F1E7)",
+            border: "none",
+            // color:'white',
+            fontSize: "20px",
+            fontFamily: "400",
+            cursor: "pointer",
+          }}
+        >
+          3
+        </button>
+        <button
+          style={{
+            width: "98px",
+            height: "60px",
+            borderRadius: "10px",
+            background: "var(--Primary, #F9F1E7)",
+            border: "none",
+            // color:'white',
+            fontSize: "20px",
+            fontFamily: "400",
+            cursor: "pointer",
+          }}
+        >
+          Next
+        </button>
+      </div>
+
+      <div id="shoplast">
+        <div>
+          <img src={trophy} alt="" />
+          <div>
+            <h2>High Quality</h2>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+        <div>
+          <img src={guarantee} alt="" />
+          <div>
+            <h2>Warranty Protection</h2>
+            <p>Over 2 years</p>
+          </div>
+        </div>
+        <div>
+          <img src={shipping} alt="" />
+          <div>
+            <h2>Free Shipping</h2>
+            <p>Order over 150 $</p>
+          </div>
+        </div>
+        <div>
+          <img src={support} alt="" />
+          <div>
+            <h2>24 / 7 Support</h2>
+            <p>Dedicated support</p>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </Div>
   );
 };
@@ -126,6 +236,39 @@ const Div = styled.div`
     align-items: center;
     margin-right: 80px;
   }
-`;
 
-const Shopproducts = styled.div``;
+  #shoplast {
+    width: 100%;
+    height: 270px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #faf3ea;
+  }
+
+  #shoplast > div {
+    display: flex;
+    gap: 15px;
+  }
+
+  #shoplast > div h2 {
+    color: #242424;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 37.5px */
+    margin: 0;
+  }
+
+  #shoplast > div p {
+    color: var(--Color-Gray-3, #898989);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    margin: 0;
+  }
+`;
