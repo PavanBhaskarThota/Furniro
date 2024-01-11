@@ -5,6 +5,7 @@ import { Section3 } from "../components/home/Section3";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Section4 } from "../components/home/Section4";
+import { Footer } from "../components/Footer";
 
 export const HomePage = () => {
   return (
@@ -32,6 +33,8 @@ export const HomePage = () => {
       </div>
 
       <Section4 />
+
+      <Footer/>
     </Home>
   );
 };

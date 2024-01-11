@@ -14,7 +14,7 @@ export const Navbar = () => {
           <img src={logo} alt="" />
         </div>
 
-        <h2 style={{fontSize:"34px"}}>Furniro</h2>
+        <h2 style={{fontSize:"34px"}}>Funiro</h2>
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-between" , width:'28%'}}>

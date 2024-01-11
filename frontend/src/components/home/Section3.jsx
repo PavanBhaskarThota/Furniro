@@ -14,10 +14,12 @@ import heart from "./homepage/Heart.svg";
 
 import styled from "styled-components";
 
-export const Section3 = () => {
+export const Section3 = (props) => {
   const [hoverIndex, setHoverIndex] = useState(null);
 
-  const products = [
+  const { shop } = props;
+
+  var products = [
     {
       image: image1,
       product: "Syltherine",
@@ -65,6 +67,14 @@ export const Section3 = () => {
       price: "Rp 500.000",
     },
   ];
+
+  // const product = []
+
+  if (shop == "shop") {
+    products = [...products, ...products];
+  }
+
+  console.log(products, shop);
   return (
     <DIV>
       {products.length > 0 &&
@@ -204,6 +214,8 @@ const CARD = styled.div`
   &:hover {
     //transform: translateY(-10px);
     /* opacity: 0.72; */
+
+    /* transition: transform 0.5s ease; */
   }
 `;
 
@@ -224,6 +236,7 @@ const AddToCartButton = styled.div`
 
   text-align: center;
   z-index: 2;
+  transition: transform 0.5s ease;
 
   button {
     width: 80%;
@@ -239,5 +252,6 @@ const AddToCartButton = styled.div`
     line-height: 150%; /* 24px */
     margin-bottom: 10px;
     cursor: pointer;
+    transition: transform 0.5s ease;
   }
 `;

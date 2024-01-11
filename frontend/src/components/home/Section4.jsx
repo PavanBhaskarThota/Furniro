@@ -28,7 +28,7 @@ export const Section4 = () => {
           </div>
         </div>
         <div style={{ width: "5%" }}>
-          <div style={{ width: "119%" }}>
+          <div style={{ width: "110%" }}>
             <img style={{ width: "100%" }} src={img3} alt="" />
           </div>
         </div>
@@ -88,7 +88,7 @@ const Section = styled.div`
   }
 
   .part2 {
-    width: 70%;
+    width: 47%;
     display: flex;
     gap: 10px;
     justify-content: space-between;
