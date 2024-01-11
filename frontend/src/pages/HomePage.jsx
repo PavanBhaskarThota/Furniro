@@ -1,98 +1,28 @@
 import React from "react";
-import homeimg from "../Assets/homepage/Homepage_image.jpeg";
+import { Section1 } from "../components/home/Section1";
+import { Section2 } from "../components/home/Section2";
+import { Section3 } from "../components/home/Section3";
 
 export const HomePage = () => {
   console.log("home");
   return (
     <div>
-      <div
-        style={{
-          width: "100%",
-          height: "800px",
-          backgroundImage: `url(${homeimg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div
+      <Section1 />
+      <Section2 />
+      <div>
+        <h1
           style={{
-            // width: "580px",
-            // height: "400px",
-            backgroundColor: "#FFF3E3",
-            borderRadius: "10px",
-            marginLeft: "auto",
-            marginRight: "58px",
-            paddingLeft: "41px",
-            paddingTop: "62px",
-            paddingBottom: "37px",
-            paddingRight: "56px",
+            textAlign: "center",
+            fontSize: "40px",
+            fontWeight: "700",
+            fontStyle: "normal",
+            color: "var(--Font-Color1, #3A3A3A)",
+            lineHeight: "120%",
           }}
         >
-          <p
-            style={{
-              color: "var(--Font-Color, #333)",
-              fontFamily: "Poppins",
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: "600",
-              lineHeight: "normal",
-              letterSpacing: "3px",
-            }}
-          >
-            New Arrival
-          </p>
-
-          <h1
-            style={{
-              color: "var(--Primary, #B88E2F)",
-              fontFamily: "Poppins",
-              fontSize: "52px",
-              fontStyle: "normal",
-              fontWeight: '700',
-              lineHeight: "65px", // You can also use a number directly without quotes if it's unitless
-              width: "459px",
-              height: "127px",
-              flexShrink: 0,
-              margin: "0px",
-            }}
-          >
-            Discover Our New Collection
-          </h1>
-
-          <p
-            style={{
-              color: "var(--Font-Color, #333)",
-              fontFamily: "Poppins",
-              fontSize: "18px",
-              fontStyle: "normal",
-              fontWeight: "500",
-              lineHeight: "normal",
-              width: "550px",
-              marginBottom: "46px",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis.
-          </p>
-
-          <button
-            style={{
-              padding: "24px",
-              paddingLeft: "72px",
-              paddingRight: "72px",
-              background: "var(--Primary, #B88E2F)",
-              border: "none",
-              color:'white',
-              fontSize:'16px',
-              fontWeight:'700',
-              textTransform:"uppercase"
-            }}
-          >
-            Buy Now
-          </button>
-        </div>
+          Our Products
+        </h1>
+        <Section3 />
       </div>
     </div>
   );
