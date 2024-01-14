@@ -13,6 +13,7 @@ import compare from "./homepage/compare-svgrepo-com 1.svg";
 import heart from "./homepage/Heart.svg";
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Section3 = (props) => {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -80,120 +81,134 @@ export const Section3 = (props) => {
       {products.length > 0 &&
         products.map((el, i) => {
           return (
-            <CARD
-              key={i}
-              onMouseEnter={() => setHoverIndex(i)}
-              onMouseLeave={() => setHoverIndex(null)}
-            >
-              <div style={{ width: "100%" }}>
-                <img
-                  style={{ width: "100%", overflow: "cover" }}
-                  src={el.image}
-                  alt=""
-                />
-              </div>
-              <div
-                style={{
-                  background: "var(--Color-Light-BG, #F4F5F7)",
-                  padding: "15px",
-                }}
+            <Link to={"/single"}>
+              <CARD
+                key={i}
+                onMouseEnter={() => setHoverIndex(i)}
+                onMouseLeave={() => setHoverIndex(null)}
               >
-                <p
-                  style={{
-                    color: "var(--Color-Gray-1, #3A3A3A)",
-                    fontFamily: "Poppins",
-                    fontSize: "24px",
-                    fontStyle: "normal",
-                    fontWeight: "600",
-                    lineHeight: "120%",
-                    margin: "0",
-                    marginTop: "10px",
-                  }}
-                >
-                  {el.product}
-                </p>
-                <p
-                  style={{
-                    color: "var(--Color-Gray-3, #898989)",
-                    fontFamily: "Poppins",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "150%",
-                    margin: "0",
-                    marginTop: "10px",
-                  }}
-                >
-                  {el.desc}
-                </p>
+                <div style={{ width: "100%" }}>
+                  <img
+                    style={{ width: "100%", overflow: "cover" }}
+                    src={el.image}
+                    alt=""
+                  />
+                </div>
                 <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
+                  style={{
+                    background: "var(--Color-Light-BG, #F4F5F7)",
+                    padding: "15px",
+                  }}
                 >
                   <p
                     style={{
                       color: "var(--Color-Gray-1, #3A3A3A)",
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "24px",
                       fontStyle: "normal",
-                      fontWeight: 600,
-                      lineHeight: "150%",
+                      fontWeight: "600",
+                      lineHeight: "120%",
                       margin: "0",
                       marginTop: "10px",
                     }}
                   >
-                    {el.price}
+                    {el.product}
                   </p>
                   <p
                     style={{
-                      color: "var(--Color-Gray-4, #B0B0B0)",
+                      color: "var(--Color-Gray-3, #898989)",
                       fontFamily: "Poppins",
                       fontSize: "16px",
                       fontStyle: "normal",
-                      fontWeight: "400",
+                      fontWeight: 500,
                       lineHeight: "150%",
-                      textDecorationLine: "line-through",
                       margin: "0",
                       marginTop: "10px",
                     }}
                   >
-                    {el.dis}
+                    {el.desc}
                   </p>
-                </div>
-              </div>
-
-              {hoverIndex === i && (
-                <AddToCartButton>
-                  <button>Add to Cart</button>
                   <div
-                    style={{
-                      display: "flex",
-                      gap: "15px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
+                    style={{ display: "flex", justifyContent: "space-between" }}
                   >
-                    <div
-                      style={{ display: "flex", gap: "5px", cursor: "pointer" }}
+                    <p
+                      style={{
+                        color: "var(--Color-Gray-1, #3A3A3A)",
+                        fontFamily: "Poppins",
+                        fontSize: "20px",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        lineHeight: "150%",
+                        margin: "0",
+                        marginTop: "10px",
+                      }}
                     >
-                      <img src={share} alt="" />
-                      <p style={{ color: "white" }}>Share</p>
-                    </div>
-                    <div
-                      style={{ display: "flex", gap: "5px", cursor: "pointer" }}
+                      {el.price}
+                    </p>
+                    <p
+                      style={{
+                        color: "var(--Color-Gray-4, #B0B0B0)",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        lineHeight: "150%",
+                        textDecorationLine: "line-through",
+                        margin: "0",
+                        marginTop: "10px",
+                      }}
                     >
-                      <img src={compare} alt="" />
-                      <p style={{ color: "white" }}>Compare</p>
-                    </div>
-                    <div
-                      style={{ display: "flex", gap: "5px", cursor: "pointer" }}
-                    >
-                      <img src={heart} alt="" />
-                      <p style={{ color: "white" }}>Like</p>
-                    </div>
+                      {el.dis}
+                    </p>
                   </div>
-                </AddToCartButton>
-              )}
-            </CARD>
+                </div>
+
+                {hoverIndex === i && (
+                  <AddToCartButton>
+                    <button>Add to Cart</button>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "15px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "5px",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <img src={share} alt="" />
+                        <p style={{ color: "white" }}>Share</p>
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "5px",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <img src={compare} alt="" />
+                        <p style={{ color: "white" }}>Compare</p>
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "5px",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <img src={heart} alt="" />
+                        <p style={{ color: "white" }}>Like</p>
+                      </div>
+                    </div>
+                  </AddToCartButton>
+                )}
+              </CARD>
+            </Link>
           );
         })}
     </DIV>
@@ -206,6 +221,10 @@ const DIV = styled.div`
   gap: 20px;
   width: 85%;
   margin: auto;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const CARD = styled.div`
