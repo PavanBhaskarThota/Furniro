@@ -1,9 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+
 import arrow from "../Assets/singleProduct/dashicons_arrow-up-alt2.svg";
+import arrow from "../Assets/singleProduct/";
 
 export const SingleProduct = () => {
   return (
-    <div>
+    <Single>
       <div
         style={{
           height: "100px",
@@ -24,6 +27,13 @@ export const SingleProduct = () => {
         </dir>
         <p>Asgaard sofa</p>
       </div>
-    </div>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </Single>
   );
 };
+
+const Single = styled.div``;
