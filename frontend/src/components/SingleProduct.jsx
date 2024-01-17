@@ -27,24 +27,37 @@ export const SingleProduct = () => {
         <p>Asgaard sofa</p>
       </div>
 
-      <div>
-        <div>
-          <div></div>
-          <div>
-            <img src={img1} alt="" />
+      <div
+        style={{
+          display: "flex",
+          width: "50%",
+          justifyContent: "space-around",
+          marginTop: "30px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            width: "10%",
+          }}
+        >
+          <div style={{ width: "100%", background: "#F9F1E7" , borderRadius:'10px'}}>
+            <img style={{ width: "100%" }} src={img1} alt="" />
           </div>
-          <div>
-            <img src={img1} alt="" />
+          <div style={{ width: "100%", background: "#F9F1E7" , borderRadius:'10px'}}>
+            <img style={{ width: "100%" }} src={img1} alt="" />
           </div>
-          <div>
-            <img src={img1} alt="" />
+          <div style={{ width: "100%", background: "#F9F1E7" }}>
+            <img style={{ width: "100%" }} src={img1} alt="" />
           </div>
-          <div>
-            <img src={img1} alt="" />
+          <div style={{ width: "100%", background: "#F9F1E7" , borderRadius:'10px'}}>
+            <img style={{ width: "100%" }} src={img1} alt="" />
           </div>
         </div>
         <div>
-          <div>
+          <div style={{ background: "#F9F1E7" , borderRadius:'10px'}}>
             <img src={img1} alt="" />
           </div>
         </div>
