@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import arrow from "../Assets/singleProduct/dashicons_arrow-up-alt2.svg";
-// import arrow from "../Assets/singleProduct/";
-
+import img1 from "../Assets/singleProduct/Asgaard sofa 3.png";
 export const SingleProduct = () => {
   return (
     <Single>
@@ -31,9 +30,24 @@ export const SingleProduct = () => {
       <div>
         <div>
           <div></div>
-          <div><img src={arrow} alt="" /></div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
         </div>
-        <div></div>
+        <div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
+        </div>
       </div>
     </Single>
   );
